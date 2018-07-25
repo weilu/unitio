@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
   })
   onScroll()
+  setTimeout(() => {
+    // transition in owl
+    logo.classList.remove('init')
+  })
 })
 
 window.onscroll = onScroll
@@ -25,9 +29,9 @@ function resizeLogo () {
   const scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
 
   if (logo.className !== 'smallLogo' && scroll > endOfDocumentTop) {
-    logo.className = 'smallLogo'
+    logo.classList.replace('largeLogo', 'smallLogo')
   } else if (logo.className !== 'largeLogo' && scroll <= endOfDocumentTop) {
-    logo.className = 'largeLogo'
+    logo.classList.replace('smallLogo', 'largeLogo')
   }
 }
 

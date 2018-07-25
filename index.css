@@ -104,20 +104,29 @@ h3 {
 
 #logo {
   display: block;
-  transition: all 0.3s;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  position: absolute;
 }
 
-.largeLogo{
+
+#logo.largeLogo {
+  transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s;
   width: 150px;
-  position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(1);
+  top: 150px;
 }
 
-.smallLogo{
+#logo.smallLogo{
   width: 80px;
-  position: absolute;
   left: 0px;
+  transform: translateX(0) scale(1);
+  top: 0;
+}
+
+#logo.init {
+  transform: translateX(-50%) scale(0.5);
+  top: 0;
 }
 
 #home{
