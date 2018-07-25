@@ -14,7 +14,7 @@ h1, h2, h3 {
   text-align: center;
 }
 h3 {
-  font-size: 16px;
+  font-size: 20px;
   margin: 5px 0;
   padding: 0;
   z-index: 1;
@@ -115,8 +115,8 @@ h3 {
   padding: 200px 0;
 }
 #contact{
-  height: 360px;
-  padding-top: 350px;
+  height: 330px;
+  padding-top: 250px;
   background-size: cover;
   text-align: center;
   font-size: larger;
