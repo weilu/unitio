@@ -84,14 +84,19 @@ h3 {
   float: left;
   padding-left: 21px;
 }
-#nav li a, #nav li a:visited {
+#nav li a,
+#nav li a:visited {
   opacity:0.6;
   font-size: 16px;
   text-decoration: none;
   color: #fff;
+  transition: all 0.3s;
+  border-bottom: 2px solid transparent;
 }
-#nav.inverted li a, #nav.inverted li a:visited {
+#nav.inverted li a,
+#nav.inverted li a:visited {
   color: black;
+
 }
 #nav li a.active { opacity:1; border-bottom: 2px solid #fff; }
 #nav.inverted li a.active { border-bottom: 2px solid black; }
