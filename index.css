@@ -90,10 +90,11 @@ h3 {
 
 .largeLogo{
   width: 150px;
-  position: relative;
-  margin: 0 auto;
-  padding-top: 150px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 .smallLogo{
   width: 80px;
   position: absolute;
