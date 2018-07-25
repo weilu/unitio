@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       document.querySelector(event.target.getAttribute('href')).scrollIntoView({behavior: 'smooth'})
     }
   });
-
+  markActive()
 });
 
 window.onscroll = function() {
