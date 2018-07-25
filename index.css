@@ -13,6 +13,7 @@ body {
 #bg {
   background-color: #111114;
   position: fixed;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
   background-color: #111114;
@@ -34,27 +35,25 @@ h3 {
   text-align: left;
   margin: 5px 0;
   padding: 0;
-  z-index: 1;
   position: relative;
 }
 
 .center { margin: 0 auto; }
 .content{
   margin: 0 auto;
-  width: 600px;
+  width: 45%;
   position: relative;
 }
 .clear { clear: both; }
 
 #header .content {
-  width: 860px;
+  width: 65%;
 }
 
 #header {
   width: 100%;
-  height: 120px;
   position: fixed;
-  margin-top: 30px;
+  margin-top: 5vh;
   z-index: 100;
 }
 
@@ -89,7 +88,6 @@ h3 {
   right: 0px;
 }
 #nav {
-  top: 20px;
   width: 410px;
 }
 #nav ul{
@@ -128,14 +126,14 @@ h3 {
 
 #logo.largeLogo {
   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.05) 0.75s;
-  width: 150px;
+  height: 20vh;
   left: 50%;
   transform: translateX(-50%) scale(1.5);
-  top: 150px;
+  top: 16vh;
 }
 
 #logo.smallLogo{
-  width: 80px;
+  height: 12vh;
   left: 0px;
   transform: translateX(0) scale(1);
   top: 0;
@@ -146,24 +144,19 @@ h3 {
   top: 0;
 }
 
-#home{
-  height: 600px;
-  margin: 0;
-  padding-top: 350px;
-  background-size: cover;
+#home {
+  padding: 40vh 0 30vh;
 }
 #services{
+  padding: 20vh 0;
   background-color: #fff;
   color: #333333;
   margin: 0 auto;
-  padding: 200px 0;
   z-index: 11;
   position: relative;
 }
 #contact{
-  height: 330px;
-  padding-top: 250px;
-  background-size: cover;
+  padding: 40vh 0;
   text-align: center;
   font-size: larger;
 }
@@ -179,4 +172,119 @@ h3 {
 
 .text_container ul {
   margin-bottom: 4rem;
+}
+
+/**
+ * Basic CSS Media Query Template
+ * Author: Michael Vieth
+ * ------------------------------------------
+ *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet
+ *   480-less    - phone landscape & smaller
+ * --------------------------------------------
+ */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  #header {
+    margin-top: 5vh;
+  }
+  #logo.largeLogo{
+    height: 15vh;
+  }
+  #home {
+    padding: 40vh 0;
+  }
+  #services{
+    padding: 30vh 0;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+
+@media all and (min-width: 480px) and (max-width: 768px) { }
+
+@media all and (max-width: 480px) {
+  .content{
+    width: 80%;
+  }
+  #header .content {
+    width: 80%;
+  }
+}
+
+
+/* Portrait */
+@media screen and (orientation:portrait) { 
+}
+
+/* non-desktop Landscape */
+@media screen and (orientation:landscape) and (max-width: 1280px){
+  #logo.largeLogo{
+    top: 20vh;
+  }
+  #logo.smallLogo{
+    top: 2vh;
+  }
+  #header {
+    margin-top: 2vh;
+  }
+  .content{
+    width: 80%;
+  }
+  #header .content {
+    width: 80%;
+  }
+}
+
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+  #logo.smallLogo{
+    height: 8vh;
+  }
+}
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+  /* /* not working */ */
+  /* #contact{ */
+  /*   padding: 10vh 0; */
+  /* } */
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+  #header {
+    margin-top: 3vh;
+  }
+  #logo.smallLogo{
+    height: 8vh;
+  }
+  .content{
+    width: 60%;
+  }
+  #header .content {
+    width: 70%;
+  }
+  #contact{
+    padding: 42vh 0;
+  }
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
 }
