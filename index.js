@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
   document.querySelector('#nav').addEventListener('click', function (event) {
     event.preventDefault()
     if (event.target.matches('li a')) {
-      if (event.target.getAttribute('href') === '#home') {
+      var anchor = event.target.getAttribute('href')
+      if (anchor === '#home') {
         window.scroll({top: 0, behavior: 'smooth'})
       } else {
-        document.querySelector(event.target.getAttribute('href')).scrollIntoView({behavior: 'smooth'})
+        document.querySelector(anchor).scrollIntoView({behavior: 'smooth', block: 'start'})
       }
     }
   })
