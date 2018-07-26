@@ -213,6 +213,22 @@ h3 {
   }
 }
 
+/* large screen */
+@media only screen and (min-width: 1824px) {
+  #logo.largeLogo{
+    height: 16vh;
+  }
+  #home {
+    padding: 42vh 0 40vh;
+  }
+  #services{
+    padding: 26vh 0;
+  }
+  #contact{
+    padding: 41vh 0;
+  }
+}
+
 
 /* Portrait */
 @media screen and (orientation:portrait) { 
