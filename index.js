@@ -15,11 +15,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
       }
     }
   })
+
   onScroll()
   setTimeout(() => {
     // transition in owl
     logo.classList.remove('init')
   })
+
+  document.querySelector('#copyright span').innerHTML = new Date().getFullYear()
 })
 
 window.onscroll = onScroll
